@@ -1,0 +1,38 @@
+.stat_list{
+    width: 400px;
+    display: flex;
+    align-content: center;
+   
+   
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+  
+}
+.label{
+    margin-left: 3px;
+}
+
+.title{
+   display: flex;
+  
+   justify-content: center;
+  
+}
+
+.statistics{
+    justify-content: center;
+    align-items: center;
+   width: 500px;
+   margin-bottom: 10px;
+   border-radius: 10px;
+background: #AFCDE7;
+    
+}
