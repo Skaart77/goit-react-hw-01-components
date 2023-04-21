@@ -24,9 +24,9 @@ export const OnlineItem = styled.span`
   margin-right: 12px;
   background-color: ${props => {
     switch (props.isOnline) {
-      case 'true':
+      case true:
         return 'green';
-      case 'false':
+      case false:
         return 'red';
     }
   }};
