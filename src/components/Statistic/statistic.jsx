@@ -1,23 +1,19 @@
-import css from 'components/Statistic/statistic.module.css';
 import PropTypes from 'prop-types';
+import { Statistic, StatList, Item, Label, Title } from './statistic.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <div className={css.statistics}>
-      {title && <h2 className={css.title}>{title}</h2>}
-      <ul className={css.stat_list}>
+    <Statistic>
+      {title && <Title>{title}</Title>}
+      <StatList>
         {stats.map(stat => (
-          <li
-            key={stat.id}
-            className={css.item}
-            style={{ backgroundColor: getRandomHexColor() }}
-          >
-            <span className={css.label}>{stat.label}</span>
-            <span className={css.percentage}>{stat.percentage}%</span>
-          </li>
+          <Item key={stat.id} style={{ backgroundColor: getRandomHexColor() }}>
+            <Label>{stat.label}</Label>
+            <span>{stat.percentage}%</span>
+          </Item>
         ))}
-      </ul>
-    </div>
+      </StatList>
+    </Statistic>
   );
 };
 

@@ -1,13 +1,14 @@
-import css from 'components/Friends/friends.module.css';
 import PropTypes from 'prop-types';
+import { FriendsItem, OnlineItem } from './friends.styled';
 
-export const FriendListItem = ({ avatar, name, isOnline }) => {
+export const FriendsListItem = ({ avatar, name, isOnline }) => {
   return (
-    <li className={css.item}>
-      <span className={isOnline ? css.online : css.offline}></span>
-      <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
-      <p className={css.name}>{name}</p>
-    </li>
+    <FriendsItem>
+      <OnlineItem isOnline={isOnline}></OnlineItem>
+      {/* <span className={isOnline ? css.online : css.offline}></span> */}
+      <img src={avatar} alt="User avatar" width="48" />
+      <p>{name}</p>
+    </FriendsItem>
   );
 };
 
